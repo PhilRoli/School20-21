@@ -1,7 +1,7 @@
 // import used for math.random + math.round in mRun function
 import java.lang.Math;
 
-public class Rennmouse {
+public class Rennmaus {
 
 	// Name eg: Mongolian racing rat
 	private String name;
@@ -12,8 +12,8 @@ public class Rennmouse {
 	// Distance Ran
 	private double distanceRan;
 
-	// Rennmouse: String Owner Name, String Race of Mouse, double maxSpeed of mouse
-	public Rennmouse(String name, String mRace, double maxSpeed) {
+	// Rennmaus: String Owner Name, String Race of Mouse, double maxSpeed of mouse
+	public Rennmaus(String name, String mRace, double maxSpeed) {
 
 		this.name = name;
 		this.mRace = mRace;

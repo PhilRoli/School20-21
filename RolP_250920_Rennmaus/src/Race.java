@@ -9,7 +9,7 @@ public class Race {
     // Number of Participants
     private int nParticipants;
     // Participants
-    private ArrayList<Rennmouse> participantList = new ArrayList<Rennmouse>();
+    private ArrayList<Rennmaus> participantList = new ArrayList<Rennmaus>();
     // Distance to run
     private double runDistance;
     // index of current mouse running
@@ -24,8 +24,8 @@ public class Race {
         this.runDistance = runDistance;
     }
 
-    // Adds Mice from the Rennmouse Class to the race into a arraylist
-    public void addRaceMice (Rennmouse neueMaus) {
+    // Adds Mice from the Rennmaus Class to the race into a arraylist
+    public void addRaceMice (Rennmaus neueMaus) {
         participantList.add(neueMaus);
         // Output to indicate successful addition
         System.out.println(participantList.get(participantList.size()-1).getName() + " has been added to the Race");
@@ -33,7 +33,7 @@ public class Race {
 
     // Removes Mice with the same name as given with function call
     public void removeRaceMice (String Name) {
-        for (Rennmouse participant: participantList) {
+        for (Rennmaus participant: participantList) {
             // checks if given name equals any mice in arraylist
             if (participant.getName().equals(Name)) {
                 // if yes, removes it
@@ -59,11 +59,11 @@ public class Race {
         // combines race data + line + linebreak in single string
         ReturnString = rData + LineBreak + HorizontalLine + LineBreak;
 
-        Iterator<Rennmouse> itr = participantList.iterator();
+        Iterator<Rennmaus> itr = participantList.iterator();
 
         // calls all participants .toString functions and combines into single string
         while(itr.hasNext()){  
-            Rennmouse mouse = (Rennmouse)itr.next();  
+            Rennmaus mouse = (Rennmaus)itr.next();  
             ReturnString =  ReturnString + mouse.toString() + LineBreak;
           }  
 
@@ -88,7 +88,7 @@ public class Race {
     }  
     
     // checks if this.currentMouse has crossed the finish line
-    private Rennmouse getWinner() {
+    private Rennmaus getWinner() {
             if(participantList.get(this.currentMouse).getDistanceRan() >= this.runDistance) {
                 // sets winner to true and ends raceRace function
                 winner = true;
