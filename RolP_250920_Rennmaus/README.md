@@ -13,7 +13,7 @@ _Rennmouse == Race Mouse_
 
 ---
 
-### [Race.java](/src/Race.java)
+### [Race.java](https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Race.java)
 
 - **Race(String raceName, int nParticipants, double runDistance)**: Constructer for the class Race, String raceName > Name of the Race / int nParticipants > Number of Participants / double runDistance > Distance the Race lasts for.
 
@@ -29,7 +29,7 @@ _Rennmouse == Race Mouse_
 
 - **public void raceRace()**: Starts the race, works with the help of the getWinner & letMouseRun functions. if Winner == true, ends the programm.
 
-### [Rennmouse.java](/src/Rennmouse.java)
+### [Rennmouse.java](https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmouse.java)
 
 - **public Rennmouse(String name, String mRace, double maxSpeed)**: Constructer for the class Rennmouse, String name > Name of the Owner, String mRace > Race of the Race Mouse, double maxSpeed > max Speed of the Mouse
 
