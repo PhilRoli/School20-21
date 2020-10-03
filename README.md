@@ -13,4 +13,4 @@ Some are English or German only, some are mixed. If you have any questions you c
 
 ---
 
-- **[RolP_250920_Rennmouse](/RolP_250920_Rennmaus)**: Java Project where we had to make a class Race and one Rennmouse. These, in addition to a testeRennmouse test file, can simulate a race between mice. For a more detailed explanation go **[here](/RolP_250920_Rennmaus/README.md)**.
+- **[RolP_250920_Rennmouse](./RolP_250920_Rennmaus)**: Java Project where we had to make a class Race and one Rennmouse. These, in addition to a testeRennmouse test file, can simulate a race between mice. For a more detailed explanation go **[here](./RolP_250920_Rennmaus/README.md)**.
