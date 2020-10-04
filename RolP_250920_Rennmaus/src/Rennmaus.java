@@ -33,7 +33,7 @@ public class Rennmaus {
 
 	// puts name, race and max speed into return string
 	public String toString() {
-		String mouseData = ("Name: " + this.name + " | Race: " + this.mRace + " | Max Speed: " + this.maxSpeed + " m/m");
+		String mouseData = ("Name: " + this.name + " | Race: " + this.mRace + " | Max Speed: " + this.maxSpeed + " km/h");
 		return mouseData;
 	}
 
