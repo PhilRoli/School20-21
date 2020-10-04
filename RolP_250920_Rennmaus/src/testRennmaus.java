@@ -6,10 +6,10 @@ public class testRennmaus {
         String LineBreak = "\r\n";
         // Number of participants has to be right !!!
         Race Race01 = new Race("Race Test", 4, 100);
-        Rennmaus mouse1 = new Rennmaus("Mouse1", "Mongolian ", 40);
-        Rennmaus mouse2 = new Rennmaus("Mouse2", "Mexican   ", 40);
-        Rennmaus mouse3 = new Rennmaus("Mouse3", "Australian", 40);
-        Rennmaus mouse4 = new Rennmaus("Mouse4", "African   ", 40);
+        Rennmaus mouse1 = new Rennmaus("Mouse1", "Mongolian ", 13);
+        Rennmaus mouse2 = new Rennmaus("Mouse2", "Mexican   ", 13);
+        Rennmaus mouse3 = new Rennmaus("Mouse3", "Australian", 13);
+        Rennmaus mouse4 = new Rennmaus("Mouse4", "African   ", 13);
 
         Race01.addRaceMice(mouse1);
         Race01.addRaceMice(mouse2);
