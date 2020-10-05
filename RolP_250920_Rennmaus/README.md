@@ -1,5 +1,6 @@
 # RolP_250920_Rennmaus
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PhilRoli/School20-21/pulls) 
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PhilRoli/School20-21/pulls)
 
 Java Project where we had to make a class Race and class Rennmaus. These, in addition to a testeRennmaus test file, can simulate a race between mice.
 
@@ -38,11 +39,11 @@ _Rennmaus == Race Mouse / Rennmouse_
 - **[public String toString()][toString]**: Returns all info about the current mouse as a String
 
 - **[Getters & Setters][GetAndSet]**: Getters and Setters that are used
-    - public String getName()
-    - public String getmRace()
-    - public double getMaxSpeed()
-    - public double getDistanceRan()
-    - public void setDistanceRan(double distanceRan)
+  - public String getName()
+  - public String getmRace()
+  - public double getMaxSpeed()
+  - public double getDistanceRan()
+  - public void setDistanceRan(double distanceRan)
 
 <!-- Links Used, Ignore -->
 
