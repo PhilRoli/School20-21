@@ -1,6 +1,6 @@
 # School20-21
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PhilRoli/School20-21/pulls) [![GitHub last commit](https://img.shields.io/github/last-commit/philroli/Batch_Scripts)](https://github.com/PhilRoli/School20-21/pulls) ![GitHub repo size](https://img.shields.io/github/repo-size/philroli/School20-21)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PhilRoli/School20-21/pulls) [![GitHub last commit](https://img.shields.io/github/last-commit/philroli/School20-21)](https://github.com/PhilRoli/School20-21/pulls) ![GitHub repo size](https://img.shields.io/github/repo-size/philroli/School20-21)
 
 
 All projects I created for school while in class 20-21.
