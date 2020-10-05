@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.Line;
-
 public class Racemouse_cmd {
 
     // String Linebreak used to give out empty line
@@ -42,10 +40,11 @@ public class Racemouse_cmd {
         // add mice Function
         addMice(nParticipants);
 
-        // TODO output race info & mice
-        // outputWholeInfo();
+        // output race info & mice
+        System.out.println(LineBreak + Race01.toString());
 
-        // TODO Race
+        // Race
+        startRace();
 
     }
 
@@ -90,10 +89,10 @@ public class Racemouse_cmd {
             okayInput = false;
             Scanner raceInfo = new Scanner(System.in);
             System.out.println(LineBreak + "How do you want to name this Race?");
-            String raceName = raceInfo.next();
+            String raceName = raceInfo.nextLine();
             while (lengthInput == false) {
                 System.out.println(LineBreak + "How long do you want your race to be? (in m)");
-                String sRaceLength = raceInfo.next();
+                String sRaceLength = raceInfo.nextLine();
                 try {
                     double RaceLenght = Double.parseDouble(sRaceLength);
                     if (RaceLenght < 1) {
@@ -107,7 +106,7 @@ public class Racemouse_cmd {
                                         + RaceLenght + "m and will have " + nParticipants + " Participants");
                         System.out.println(
                                 LineBreak + "Are you okay with these infos? Enter Y for yes or N to start over again");
-                        String sOkayChoice = raceInfo.next();
+                        String sOkayChoice = raceInfo.nextLine();
                         char okayChoice = Character.toUpperCase(sOkayChoice.charAt(0));
                         if (okayChoice == 'Y') {
                             // Declaration of Race with user given variables
@@ -141,17 +140,16 @@ public class Racemouse_cmd {
     private static void addMice(int nParticipants) {
         Scanner miceInfo = new Scanner(System.in);
         int currentMouse = 1;
-        boolean correctInput = false;
         boolean speedInput = false;
         while (currentMouse <= nParticipants) {
             speedInput = false;
             System.out.println(LineBreak + "Who is th Owner of Mouse nr." + currentMouse);
-            String mouseName = miceInfo.next();
+            String mouseName = miceInfo.nextLine();
             System.out.println(LineBreak + "Where does the Mouse come from?");
-            String mouseRace = miceInfo.next();
+            String mouseRace = miceInfo.nextLine();
             while (speedInput == false) {
                 System.out.println(LineBreak + "What is the Max Speed of the Mouse? (in km/h)");
-                String sMouseSpeed = miceInfo.next();
+                String sMouseSpeed = miceInfo.nextLine();
                 try {
                     double mouseSpeed = Double.parseDouble(sMouseSpeed);
                     System.out.println("");
@@ -159,30 +157,40 @@ public class Racemouse_cmd {
                             + "\" and has a maxspeed of " + mouseSpeed + "km/h");
                     System.out.println(
                             LineBreak + "Are you okay with these infos? Enter Y for yes or N to start over again");
-                    String sOkayChoice = miceInfo.next();
+                    String sOkayChoice = miceInfo.nextLine();
                     char okayChoice = Character.toUpperCase(sOkayChoice.charAt(0));
                     if (okayChoice == 'Y') {
                         // ! Looking for a way to do this better !
                         if (currentMouse == 1) {
                             mouse01 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse01);
                         } else if (currentMouse == 2) {
                             mouse02 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse02);
                         } else if (currentMouse == 3) {
                             mouse03 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse03);
                         } else if (currentMouse == 4) {
                             mouse04 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse04);
                         } else if (currentMouse == 5) {
                             mouse05 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse05);
                         } else if (currentMouse == 6) {
                             mouse06 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse06);
                         } else if (currentMouse == 7) {
                             mouse07 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse07);
                         } else if (currentMouse == 8) {
                             mouse08 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse08);
                         } else if (currentMouse == 9) {
                             mouse09 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse09);
                         } else if (currentMouse == 10) {
                             mouse10 = new Rennmaus(mouseName, mouseRace, mouseSpeed);
+                            Race01.addRaceMice(mouse10);
                         }
                         // ! Looking for a way to do this better !
                         currentMouse++;
@@ -202,6 +210,25 @@ public class Racemouse_cmd {
             }
 
         }
+    }
+
+    private static void startRace() {
+        Scanner confirmRace = new Scanner(System.in);
+        boolean confirm = false;
+        while (confirm == false) {
+            System.out.println("Do you want to start the Race? Y / N");
+            String sConfirm = confirmRace.nextLine();
+            char Confirm = Character.toUpperCase(sConfirm.charAt(0));
+            if (Confirm == 'Y') {
+                Race01.raceRace(0);
+            } else if (Confirm != 'N') {
+                System.out
+                        .println(LineBreak + redOutput + "The input has to be either Y or N" + resetOutput + LineBreak);
+                continue;
+            }
+            System.exit(0);
+        }
+
     }
 
 }
