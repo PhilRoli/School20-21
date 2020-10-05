@@ -22,7 +22,7 @@ public class testRennmaus {
 
         System.out.println(LineBreak + Race01.toString());
 
-        Race01.raceRace();
+        Race01.raceRace(0);
 
         // Used if system.exit in raceRace is commented out
         System.out.println(" ");

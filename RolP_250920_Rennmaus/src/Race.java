@@ -72,11 +72,11 @@ public class Race {
     }
 
     // lets the mouse run
-    private void letMouseRun() {
+    private void letMouseRun(int output) {
         // checks if current mouse index is higher than number of participants, if yes, set to 0
         if(this.currentMouse >= this.nParticipants) {
             this.currentMouse = 0;
-            System.out.println(" ");
+            // System.out.println(" ");
         }
 
         // calculation for distance total, laid back and setting new total distance
@@ -84,7 +84,10 @@ public class Race {
         participantList.get(this.currentMouse).setDistanceRan(participantList.get(this.currentMouse).getDistanceRan() + participantList.get(this.currentMouse).mRun());
         double disRan = participantList.get(this.currentMouse).getDistanceRan() - disBefore;
         // output of distance + total distance ran
-        System.out.println(participantList.get(this.currentMouse).getName() + " has ran " + disRan + " | T: " + participantList.get(this.currentMouse).getDistanceRan());
+        if(output == 1) {
+            System.out.println(participantList.get(this.currentMouse).getName() + " has ran " + disRan + " | T: " + participantList.get(this.currentMouse).getDistanceRan());
+        }
+        
     }  
     
     // checks if this.currentMouse has crossed the finish line
@@ -103,17 +106,21 @@ public class Race {
     }
 
     // Race function, lets the mice run and gets the winner
-    public void raceRace() {
+    public void raceRace(int outputTF) {
+         // Turns the console output green
+        String greenOutput = "\033[0;32m";
+        // Turns the console output back to normal
+        String resetOutput = "\u001B[0m";
 
         // while no winner is present, lets mice run and checks for winner
         while(winner == false) {
-            letMouseRun();
+            letMouseRun(outputTF);
             getWinner();
         }
         
         // when winner is present, outputs winner name and ends programm
         System.out.println(" ");
-        System.out.println("\"" + participantList.get(this.currentMouse).getName() + "\" has won the Race!!!");
+        System.out.println(greenOutput + "\"" + participantList.get(this.currentMouse).getName() + "\" has won the Race!!!" + resetOutput);
         System.exit(0);
             
     }
