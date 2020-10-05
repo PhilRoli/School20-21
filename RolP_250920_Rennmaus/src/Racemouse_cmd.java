@@ -8,7 +8,11 @@ public class Racemouse_cmd {
     private static String redOutput = "\033[1;31m";
     // Turns the console output back to normal
     private static String resetOutput = "\u001B[0m";
+    // number of participants, defined here for use in 2 functions
     private static int nParticipants;
+    // Race Class Pre defined to use in main & other functions
+    private static Race Race01;
+    
     public static void main(String[] args) {
         
         // Greeting of the user
@@ -19,6 +23,8 @@ public class Racemouse_cmd {
 
         // setting the race info
         setRaceInfo(nParticipants);
+
+        
         
     }
 
@@ -29,9 +35,9 @@ public class Racemouse_cmd {
 
     private static void selectParticipants() {
         boolean input = false;
+        Scanner participantsScanner = new Scanner(System.in);
         while(input == false) {
             System.out.println("How many mice do you want to add?");
-            Scanner participantsScanner = new Scanner(System.in);
             String sParticipants = participantsScanner.nextLine();
             try{
                 nParticipants = Integer.parseInt(sParticipants);
@@ -39,7 +45,7 @@ public class Racemouse_cmd {
                     System.out.println(redOutput + "The given number has to be bigger then 1" + resetOutput + LineBreak);
                     continue;
                 }
-                // ! Line 59 & 62 Crash if scanner is closed
+                // ! Line 60 & 65 Crash if scanner is closed
                 // ! participantsScanner.close();
                 input = true;
             }catch (NumberFormatException ex) {
@@ -47,15 +53,20 @@ public class Racemouse_cmd {
                 continue;
             }
         }
+        participantsScanner.close();
+        
     }
 
-    private static void setRaceInfo(int nParticipants) {
+    public static void setRaceInfo(int nParticipants) {
         boolean nameInput = false;
         boolean lengthInput = false;
         boolean okayInput = false;
         while(nameInput == false) {
+            // sets the booleans back to false bc of lines 91 - 93
+            lengthInput = false;
+            okayInput = false;
             Scanner raceInfo = new Scanner(System.in);
-            System.out.println("How do you want to name this Race?");
+            System.out.println(LineBreak + "How do you want to name this Race?");
             String raceName = raceInfo.next();
             while(lengthInput == false) {
                 System.out.println(LineBreak + "How long do you want your race to be? (in m)");
@@ -73,7 +84,7 @@ public class Racemouse_cmd {
                         char okayChoice = Character.toUpperCase(sOkayChoice.charAt(0));
                         if(okayChoice == 'Y') {
                             // Declaration of Race with user given variables
-                            Race Race01 = new Race(raceName, nParticipants, RaceLenght);
+                            Race01 = new Race(raceName, nParticipants, RaceLenght);
                             nameInput = true;
                             lengthInput = true;
                             okayInput = true;
@@ -82,10 +93,12 @@ public class Racemouse_cmd {
                             continue;
                         }
                         else if(okayChoice != 'N') {
-                            System.out.println("The given Input was incorrect. Please only Enter Y or N");
+                            System.out.println(redOutput + LineBreak + "The given Input was incorrect. Please only Enter Y or N" + resetOutput + LineBreak);
                             continue;
                         }
-                        // continue;
+                        // sets booleans to true to start again at line 56
+                        lengthInput = true;
+                        okayInput = true;
                     }
                 }catch (NumberFormatException ex) {
                     System.out.println(redOutput + LineBreak + "The given Race Lenght has to be a number bigger then 0" + resetOutput + LineBreak);
