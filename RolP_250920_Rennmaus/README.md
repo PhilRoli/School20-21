@@ -14,7 +14,7 @@ _Rennmaus == Race Mouse / Rennmouse_
 
 ---
 
-### [Race.java][race]
+## [Race.java][race]
 
 - **[Race(String raceName, int nParticipants, double runDistance)][RaceCon]**: Constructer for the class Race, String raceName > Name of the Race / int nParticipants > Number of Participants / double runDistance > Distance the Race lasts for.
 
@@ -30,7 +30,7 @@ _Rennmaus == Race Mouse / Rennmouse_
 
 - **[public void raceRace()][raceRace]**: Starts the race, works with the help of the getWinner & letMouseRun functions. if Winner == true, ends the programm.
 
-### [Rennmouse.java][rennmaus]
+## [Rennmouse.java][rennmaus]
 
 - **[public Rennmouse(String name, String mRace, double maxSpeed)][Rennmouse]**: Constructer for the class Rennmouse, String name > Name of the Owner, String mRace > Race of the Race Mouse, double maxSpeed > max Speed of the Mouse
 
@@ -45,6 +45,22 @@ _Rennmaus == Race Mouse / Rennmouse_
   - public double getDistanceRan()
   - public void setDistanceRan(double distanceRan)
 
+## [Racemouse_cmd.java][racemouse_cmd]
+
+- **[public static void main(String[] args)][voidmain]**: Main Function of the programm, auto starts and executes the below functions
+
+- **[public static void greeting()][greeting]**: Greets the user with a welcome Message
+
+- **[public static void selectParticipants()][selectPart]**: Asks the user how many Mice he wants to add to the race. Used in Line 86
+
+- **[public static void setRaceInfo()][setRaceInfo]**: Asks the User about details of the race, here it is the Name, Length and Number of Participants
+
+- **[public static void addMice(int nParticipants)][addMice]**: Asks the User about the details for every Mice he wans to add. These Details are: Name of the Owner, Race of the Mouse and its Max Speed
+
+- **[public static void startRace()][startRace]**: Asks the User if he wants to start the Race. If yes, it executes [raceRace][raceRace] from the race.java file. If not it exits the Programm
+
+- **[public static void switcher(int currentMouse, String mouseName, String mouseRace, double mouseSpeed)][switcher]**: Used to initialize the current mouse in Line 186 of the addMice function
+
 <!-- Links Used, Ignore -->
 
 [race]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Race.java
@@ -58,8 +74,18 @@ _Rennmaus == Race Mouse / Rennmouse_
 [raceRace]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Race.java#L106
 
 [rennmaus]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java
-<!-- Links to race.java functions -->
-[Rennmouse]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#16
-[mRUn]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#26
-[toString]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#35
-[GetAndSet]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#40
+<!-- Links to rennmaus.java functions -->
+[Rennmouse]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#L16
+[mRUn]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#L26
+[toString]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#L35
+[GetAndSet]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Rennmaus.java#L40
+
+[racemouse_cmd]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java
+<!-- Links to racemouse_cmd.java functions-->
+[voidmain]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L29
+[greeting]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L48
+[selectPart]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L55
+[setRaceInfo]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L83
+[addMice]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L153
+[startRace]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L210
+[switcher]: https://github.com/PhilRoli/School20-21/blob/master/RolP_250920_Rennmaus/src/Racemouse_cmd.java#L233
