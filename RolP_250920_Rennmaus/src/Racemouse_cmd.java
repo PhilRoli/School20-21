@@ -14,16 +14,7 @@ public class Racemouse_cmd {
     private static Race Race01;
     // Rennmaus CLass Pre defined to use in main & other functions
     // ! Looking for a way to do this better !
-    private static Rennmaus mouse01;
-    private static Rennmaus mouse02;
-    private static Rennmaus mouse03;
-    private static Rennmaus mouse04;
-    private static Rennmaus mouse05;
-    private static Rennmaus mouse06;
-    private static Rennmaus mouse07;
-    private static Rennmaus mouse08;
-    private static Rennmaus mouse09;
-    private static Rennmaus mouse10;
+    private static Rennmaus mouse01, mouse02, mouse03, mouse04, mouse05, mouse06, mouse07, mouse08, mouse09, mouse10;
     // ! Looking for a way to do this better !
 
     public static void main(String[] args) {
