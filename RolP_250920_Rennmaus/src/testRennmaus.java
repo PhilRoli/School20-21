@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class testRennmaus {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String LineBreak = "\r\n";
         // Number of participants has to be right !!!
         Race Race01 = new Race("Race Test", 4, 100);
@@ -31,5 +31,5 @@ public class testRennmaus {
         scan.nextLine();
         scan.close();
     }
-    
+
 }
