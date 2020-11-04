@@ -1,7 +1,3 @@
-import java.util.Random;
-
-import javax.xml.crypto.dsig.TransformService;
-
 public class Spieler extends Person {
     public int staerke; // 1 - 10
     public int torschuss; // 1 - 10
