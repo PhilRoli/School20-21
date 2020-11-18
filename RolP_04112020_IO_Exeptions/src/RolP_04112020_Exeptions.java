@@ -9,13 +9,13 @@
     
 */
 
-public class RolP_04112020 {
+public class RolP_04112020_Exeptions {
     public static void main(String[] args) {
 
         try {
             int[] array = { 0, 1, 2, 3, 4, 5 };
             //!                !
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i <= array.length; i++) {
                 System.out.println(i + 1 + ": " + array[i]);
                 /*
                  * 1: 0
