@@ -1,1 +1,2 @@
 Das ist die zweite Datei, dein Programm hat funktioniert!
+Und das ist eine zweite Zeile!
