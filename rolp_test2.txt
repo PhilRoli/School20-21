@@ -1,2 +1,7 @@
-Das ist die zweite Datei, dein Programm hat funktioniert!
-Und das ist eine zweite Zeile!
+1: Das ist die zweite Datei, dein Programm hat funktioniert!
+2: Und das ist eine zweite Zeile!
+3: Ist das die dritte zeile?
+4: Ja, und hier ist die vierte.
+5: Aber mir gefällt die fünfte am besten.
+6: Aber ich bin doch schon sechs.
+7: Und ich bin 7. Das ist die hälfte von 14!
