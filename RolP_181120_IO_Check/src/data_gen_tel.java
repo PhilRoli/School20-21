@@ -7,7 +7,7 @@ public class data_gen_tel {
         // telnr = Array[1234] + Array [12345678] + random picker
         // Betrag = random Double 150 -> 1
 
-        for (int i = 0; i < 800; i++) {
+        for (int i = 0; i < 100; i++) {
             System.out.println(nachname() + ',' + vorname() + ',' + adresse() + ',' + telnr() + ',' + betrag());
         }
     }
