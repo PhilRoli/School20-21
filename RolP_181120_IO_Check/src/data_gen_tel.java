@@ -7,7 +7,7 @@ public class data_gen_tel {
         // telnr = Array[1234] + Array [12345678] + random picker
         // Betrag = random Double 150 -> 1
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 800; i++) {
             System.out.println(nachname() + ',' + vorname() + ',' + adresse() + ',' + telnr() + ',' + betrag());
         }
     }
@@ -122,9 +122,10 @@ public class data_gen_tel {
     }
 
     public static String telnr() {
-        String[] provider = { "0650", "0680", "0681", "6998", "0665", "0688", "0677", "0670", "0690" };
+        String[] provider = { "0650", "0680", "0681", "6998", "0665", "0688", "0677", "0670", "0690", "0660", "0699",
+                "0664", "0676" };
 
-        return provider[getRandomNumber(0, 8)] + ' ' + getRandomNumber(1111111, 99999999);
+        return provider[getRandomNumber(0, 12)] + ' ' + getRandomNumber(1111111, 99999999);
     }
 
     public static double betrag() {
