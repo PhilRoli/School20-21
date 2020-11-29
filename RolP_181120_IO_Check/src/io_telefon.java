@@ -28,7 +28,7 @@ public class io_telefon {
         String fileName = getDateiString();
         checkFile(fileName);
         phoneData = getDataArray(fileName);
-        dataToOutString(phoneData);
+        // dataToOutString(phoneData);
         statistik(phoneData);
         dataTable(phoneData);
     }
