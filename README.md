@@ -4,7 +4,7 @@
 
 All projects I created for school while in class 20-21.
 
-Some are English or German only, some are mixed. If you have any questions you can send me a DM on [twitter](https://twitter.com/Phil_Roli).
+Some are English or German only, some are mixed. If you have any questions you can send me a DM on [twitter](https://twitter.com/PhilRoli).
 
 ---
 
