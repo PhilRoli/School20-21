@@ -14,7 +14,7 @@ Some are English or German only, some are mixed. If you have any questions you c
 
 - **[RolP_250920_Rennmouse](/S20-21_Java/RolP_250920_Rennmaus)**: Java Project where we had to make a class Race and one Rennmouse. These, in addition to a testeRennmouse test file, can simulate a race between mice. For a more detailed explanation go **[here](/S20-21_Java/RolP_250920_Rennmaus/README.md)**.
 
-- **[RolP_12102020_Vererbung](/S20-21_Java/RolP_12102020_Vererbung)**: Java Project for school. Exercise was to learn about inheritation. Not a lot of time was spent on this in class, so its not much.
+- **[RolP_14102020_Vererbung](/S20-21_Java/RolP_14102020_Vererbung)**: Java Project for school. Exercise was to learn about inheritation. Not a lot of time was spent on this in class, so its not much.
 
 - **[RolP_04112020_IO_Exeptions](/S20-21_Java/RolP_04112020_IO_Exeptions)**: Java Project for school. Exercise was to learn about exeptions & working with files (io). Both files show a short example for each.
 
