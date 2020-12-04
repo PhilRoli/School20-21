@@ -4,7 +4,7 @@
 
 Java Project where we had to make a class Race and class Rennmaus. These, in addition to a testeRennmaus test file, can simulate a race between mice.
 
-Some are English or German only, some are mixed. If you have any questions you can send me a DM on [twitter](https://twitter.com/Phil_Roli).
+Some are English or German only, some are mixed. If you have any questions you can send me a DM on [twitter](https://twitter.com/PhilRoli).
 
 _Rennmaus == Race Mouse / Rennmouse_
 
