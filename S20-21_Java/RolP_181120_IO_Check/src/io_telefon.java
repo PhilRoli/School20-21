@@ -18,8 +18,11 @@ public class io_telefon {
         // Am ende gesamt Statisk anzeigen
         // Gesamt Telefonate
         // Gesamt Betrag
-
         // split()
+
+        // TODO 3
+        // Erweiterung
+        // Tabelle in Datei schreiben
 
         System.out.print("\n");
 
@@ -29,7 +32,7 @@ public class io_telefon {
         checkFile(fileName);
         phoneData = getDataArray(fileName);
         // dataToOutString(phoneData);
-        statistik(phoneData);
+        // statistik(phoneData);
         dataTable(phoneData);
     }
 
@@ -88,8 +91,16 @@ public class io_telefon {
         }
     }
 
-    public static void statistik(ArrayList<String[]> dataArrays) {
-        int telephonateAnzahl = dataArrays.size() - 1;
+    // public static void statistik(ArrayList<String[]> dataArrays) {
+    // System.out.println("\nAnzahl Telephonate: " + telAnzahl(dataArrays));
+    // System.out.println("Gesamter Betrag: " + gesBetrag(dataArrays));
+    // }
+
+    public static int telAnzahl(ArrayList<String[]> dataArrays) {
+        return dataArrays.size() - 1;
+    }
+
+    public static double gesBetrag(ArrayList<String[]> dataArrays) {
         double gesamtBetrag = 0.00;
 
         for (int i = 1; i < dataArrays.size(); i++) {
@@ -98,11 +109,9 @@ public class io_telefon {
             } catch (NumberFormatException e) {
                 System.out.println("Error on Line " + (i + 1) + " : " + dataArrays.get(i)[4] + " =/= double value");
             }
-
         }
 
-        System.out.println("\nAnzahl Telephonate: " + telephonateAnzahl);
-        System.out.println("Gesamter Betrag: " + Math.round(gesamtBetrag * 100.00) / 100.00);
+        return Math.round(gesamtBetrag * 100.00) / 100.00;
     }
 
     public static void dataTable(ArrayList<String[]> dataArrays) {
@@ -110,8 +119,11 @@ public class io_telefon {
         // |--------------|-------------|----------|-------------|------------|
         // |Rolinek-------|Philipp------|---5071---|0680 2407079-|14.90-------|
 
-        System.out.println("\n|   Nachname   |   Vorname   |   POST   |   Telefon   |   Betrag   |");
-        System.out.println("|              |             |          |             |            |");
+        ArrayList<String> dataList = new ArrayList<String>();
+        dataList.add(
+                "Anzahl Telephonate: " + telAnzahl(dataArrays) + "\nGesamt Betrag: " + gesBetrag(dataArrays) + "\n\n");
+        dataList.add("|   Nachname   |   Vorname   |   POST   |   Telefon   |   Betrag   |");
+        dataList.add("|              |             |          |             |            |");
 
         String nachname;
         String vorname;
@@ -127,8 +139,35 @@ public class io_telefon {
             telefon = rightPad(dataArrays.get(i)[3], 13);
             betrag = rightPad(dataArrays.get(i)[4], 12);
 
-            System.out.println(trenner + nachname + trenner + vorname + trenner + post + trenner + telefon + trenner
+            String tempString = (trenner + nachname + trenner + vorname + trenner + post + trenner + telefon + trenner
                     + betrag + trenner);
+
+            dataList.add(tempString);
+
+        }
+
+        tableToFile(dataList, "telefonDataTable.txt");
+    }
+
+    public static void tableToFile(ArrayList<String> list, String newFileName) {
+        createFile(newFileName);
+        String currentLine;
+        try {
+            BufferedWriter bWriter = new BufferedWriter(new FileWriter(newFileName));
+            try {
+                for (int lineCounter = 0; lineCounter < list.size(); lineCounter += 1) {
+                    currentLine = list.get(lineCounter);
+                    bWriter.write(currentLine + "\n");
+                }
+            } catch (IOException e) {
+                System.out.println(e);
+            } finally {
+                if (bWriter != null) {
+                    bWriter.close();
+                }
+            }
+        } catch (IOException e) {
+            System.out.println(e);
         }
     }
 
@@ -142,5 +181,15 @@ public class io_telefon {
 
     public static String rightPad(String pString, int pLength) {
         return rightPad(new StringBuilder(pString), pLength, ' ').toString();
+    }
+
+    public static void createFile(String filename) {
+        try {
+            File newFile = new File(filename);
+            newFile.createNewFile();
+        } catch (IOException e) {
+            System.out.println("An Error occured");
+            e.printStackTrace();
+        }
     }
 }
