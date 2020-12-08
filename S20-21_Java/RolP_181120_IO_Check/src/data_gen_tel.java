@@ -1,3 +1,8 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class data_gen_tel {
     public static void main(String[] args) {
         // Nachname,Vorname,Adresse,Tel Nr,Betrag
@@ -7,8 +12,33 @@ public class data_gen_tel {
         // telnr = Array[1234] + Array [12345678] + random picker
         // Betrag = random Double 150 -> 1
 
-        for (int i = 0; i < 100; i++) {
-            System.out.println(nachname() + ',' + vorname() + ',' + adresse() + ',' + telnr() + ',' + betrag());
+        String filename = "data.csv";
+
+        try {
+            File newFile = new File(filename);
+            newFile.createNewFile();
+        } catch (IOException e) {
+            System.out.println("An Error occured");
+            e.printStackTrace();
+        }
+
+        try {
+            BufferedWriter bWriter = new BufferedWriter(new FileWriter(filename));
+            try {
+                bWriter.write("Nachname,Vorname,Adresse,Telefon Nummer,Betrag\n");
+                for (int i = 0; i < 10000; i++) {
+                    bWriter.write(
+                            nachname() + ',' + vorname() + ',' + adresse() + ',' + telnr() + ',' + betrag() + "\n");
+                }
+            } catch (IOException e2) {
+                System.out.println(e2);
+            } finally {
+                if (bWriter != null) {
+                    bWriter.close();
+                }
+            }
+        } catch (IOException e) {
+            System.out.println(e);
         }
     }
 
