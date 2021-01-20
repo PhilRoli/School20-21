@@ -12,7 +12,8 @@ int main()
     double zahl = 0.;
     string text;
     string newString;
-    char cArray[] = {'N', 'e', 'u', 'e', 'r', ' ', 'S', 't', 'r', 'i', 'n', 'g', '!'};
+    char cArray[] = {'N', 'e', 'u', 'e', 'r', ' ', 'S', 't', 'r', 'i', 'n', 'g', '!', '\0'};
+    // '\0' löst das 3 zeichen am ende problem das unten gelöst wird
 
     // 2 Arten für den Pointer
 
@@ -52,5 +53,7 @@ void setTextArray(char *array, string *newString)
     // Das problem bezieht sich auf folgendes: cArray gibt im Debug modus folgendes zurück "-var-create unable to create variable object" -> https://stackoverflow.com/questions/41854840/var-create-unable-to-create-variable-object
     // Um dieses problem auf dem einfachsten weg zu umgehen, schneiden wir die letzten 3 chars des strings ab
     // Die andere möglichkeit dieses Problem zu lösen, wäre indem man zuerst einen leeren string erstellet, und diesen dann durch eine schleife mit den einzelenen chars befüllt.
-    *newString = nString.substr(0, nString.size() - 3);
+    // *newString = nString.substr(0, nString.size() - 3);
+    *newString = nString;
+    // Durch das '\0' ist es nicht mehr nötig die letzten 3 zeichen abzuschneiden
 }
