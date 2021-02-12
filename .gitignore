@@ -3,6 +3,7 @@ kopie.txt
 data.csv
 telefonDataTable.txt
 .vscode
+build-*
 
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
