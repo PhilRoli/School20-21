@@ -41,3 +41,12 @@ void Taschenrechner::showSub()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
+
+// In den "myAdd.cpp" & "mySub.cpp" & "taschenrechner.cpp" dateien folgendes inkludieren
+// " #include "ui_taschenrechner.h" "
+// sonst "allocation of incomplete type" fehler
+
+// In der "taschenrechner.h" datei den part
+// " UI::Taschenrechner *ui; "
+// von "private:" in "public:" tun
+// Sonst UI private fehler
