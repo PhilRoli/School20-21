@@ -1,0 +1,11 @@
+#include <QCoreApplication>
+#include "localserver.h"
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    LocalServer lServer;
+
+    return a.exec();
+}
