@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>699</width>
-    <height>627</height>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -68,8 +68,10 @@
     <property name="title">
      <string>Datei</string>
     </property>
+    <addaction name="separator"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
+    <addaction name="separator"/>
     <addaction name="actionClear"/>
    </widget>
    <addaction name="menuDatei"/>
