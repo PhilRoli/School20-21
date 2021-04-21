@@ -23,5 +23,7 @@ private slots:
     void fileOpen();
     void fileSave();
     void fileClear();
+    void fileSaveAs();
+    void fileNewFile();
 };
 #endif // MAINWINDOW_H
