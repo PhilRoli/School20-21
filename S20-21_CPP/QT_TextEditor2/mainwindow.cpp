@@ -63,7 +63,7 @@ void MainWindow::fileSave()
 void MainWindow::fileOpen()
 {
     // Öffnen der Explorer Fensteres und öffnen einer Datei
-    QString file_name = QFileDialog::getOpenFileName(this, "Open File", "C://");
+    QString file_name = QFileDialog::getOpenFileName(this, "Open File", "C://", "Text files (*.txt)");
     // Sollte auf "abbrechen" geklickt worden sein, aussteigen
     if (file_name == NULL)
     {
@@ -107,7 +107,7 @@ void MainWindow::fileSaveAs()
     }
 
     // Öffnen der Explorer Fensteres und öffnen einer Datei
-    QString file_name = QFileDialog::getSaveFileName(this, "Save File", file_name_new);
+    QString file_name = QFileDialog::getSaveFileName(this, "Save File", file_name_new,"Text files (*.txt)");
     // Sollte auf "abbrechen" geklickt worden sein, aussteigen
     if (file_name == NULL)
     {
@@ -130,6 +130,8 @@ void MainWindow::fileSaveAs()
     out << editorContent;
     file.flush();
     file.close();
+
+    setWindowTitle(file_name);
 }
 
 void MainWindow::fileNewFile()
