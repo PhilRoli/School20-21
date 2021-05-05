@@ -6,6 +6,7 @@
 #include <iostream>
 
 using namespace std;
+// /[,]/g  <- RegEx for filtering out commas, usefull if add User feature
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -30,7 +31,7 @@ void MainWindow::clickedLogin()
     QStringList loginDataList;
 
     // read file contents as specified place
-    QFile file("C://Users/phili/Documents/temp/logindata.txt");
+    QFile file("C://Users/phili/Documents/temp/logindata.csv");
     // Error Handeling in case file could not be opend
     if (!file.open(QFile::ReadOnly | QFile::Text))
     {
@@ -38,10 +39,17 @@ void MainWindow::clickedLogin()
         return;
     }
 
-    // reading of file content and splitting at ','
+    // reading of file content and splitting at ',' & '\n'
     QTextStream in(&file);
-    QString logindata = in.readAll();
-    loginDataList = logindata.split(",");
+    while (!file.atEnd())
+    {
+        QByteArray line = file.readLine();
+        if (line.split(',').first() != "username")
+        {
+            loginDataList.append(line.split(',').first());
+            loginDataList.append(line.split(',').back().trimmed());
+        }
+    }
 
     //! -------------------- LoginDataHandler --------------------
 
