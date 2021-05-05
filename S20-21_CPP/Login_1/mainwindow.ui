@@ -78,6 +78,9 @@
          <property name="focusPolicy">
           <enum>Qt::TabFocus</enum>
          </property>
+         <property name="placeholderText">
+          <string>password</string>
+         </property>
         </widget>
        </item>
        <item row="1" column="0">
@@ -128,6 +131,9 @@
          </property>
          <property name="toolTip">
           <string/>
+         </property>
+         <property name="placeholderText">
+          <string>username</string>
          </property>
         </widget>
        </item>
@@ -271,6 +277,22 @@
     <hint type="destinationlabel">
      <x>117</x>
      <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>linePassword</sender>
+   <signal>returnPressed()</signal>
+   <receiver>buttonLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>128</y>
     </hint>
    </hints>
   </connection>
