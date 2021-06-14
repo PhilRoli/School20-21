@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "C:\VSC_School20-21\S20-21_CPP\_Build\build-Login_1-Desktop_Qt_5_15_2_MinGW_64_bit-Debug\ui_mainwindow.h"
 #include <QTextStream>
 #include <QMessageBox>
 #include <QFile>
